@@ -135,7 +135,8 @@
     (let [cls (h/element-class-names container-element)]
       (when (seq cls)
         (h/out! " class=\"" (str/join " " cls) "\"")))
-    (h/out! html
+    (h/out! ">"
+            html
             "</" element-name ">")))
 
 (defn callback [callback-fn & parameter-names]
